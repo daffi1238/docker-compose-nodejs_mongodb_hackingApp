@@ -1,3 +1,26 @@
+# Steps while deploying
+To connect to the data base:
+```
+mongosh "mongodb://127.0.0.1:7017"
+
+#authenticate over mongodb
+mongosh "mongodb://root:123456@127.0.0.1:7017/admin?authSource=admin"
+
+#Commands with mongo
+show dbs
+use users
+db.users.insert({username: "root", pass: "root"})
+
+
+#create DB
+use Proyecto
+db.Proyecto.insertOne({name: "Microsoft"})
+
+```
+
+
+
+
 # Docker Compose Nodejs and MongoDB example
 
 ## Run the System
