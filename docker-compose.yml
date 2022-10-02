@@ -15,7 +15,7 @@ services:
   app:
     depends_on:
       - mongodb
-    build: ./bezkoder-app
+    build: ./app
     restart: unless-stopped
     env_file: ./.env
     ports:
@@ -28,6 +28,8 @@ services:
       - DB_PORT=$MONGODB_DOCKER_PORT
     stdin_open: true
     tty: true
+    volumes:
+      - ./VOL_App:/root/appp
 
 volumes:
   db:
